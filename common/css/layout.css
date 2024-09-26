@@ -137,7 +137,7 @@
   gap: 30px;
 }
 .supplies .box {
-  width: calc(33.33% - 20px);
+  width: calc(50% - 15px);
 }
 .supplies .category {
   margin-bottom: 10px;
@@ -173,7 +173,7 @@
   margin-top: 30px;
 }
 .food_list li {
-  width: calc(33.333% - 10px);
+  width: calc(50% - 15px);
 }
 .food_list li img {
   display: block;
