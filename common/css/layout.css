@@ -1,5 +1,6 @@
 @charset "UTF-8";
 #wrap {
+  height: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -27,6 +28,7 @@
 
 #container {
   padding: 50px 0 100px;
+  min-height: calc(100% - 75px);
 }
 #container .sec .subject {
   margin-bottom: 10px;
@@ -79,6 +81,20 @@
 }
 [type=checkbox]:checked + label .check_ico i {
   opacity: 1;
+}
+
+.guide_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.guide_list li {
+  width: calc(33.333% - 20px);
+}
+.guide_list li .name {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .summary {
