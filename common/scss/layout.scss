@@ -1,0 +1,460 @@
+@charset 'UTF-8';
+
+$paris: #000091;
+$swiss: #ff0000;
+$italy: #009246;
+$spain: #c60b1e;
+$thailand: #2d2a4a;
+
+#wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+// header :: S
+#header {
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #fff;
+    z-index: 100;
+
+    .title {
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    .back_btn {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 45px;
+        height: 100%;
+    }
+}
+// header :: E
+
+// container :: S
+#container {
+    padding: 50px 0 100px;
+
+    .sec {
+        .subject {
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        & + .sec {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px dashed #252525;
+        }
+    }
+}
+// container :: E
+
+// footer :: S
+#footer {
+    padding: 5px 0;
+    text-align: right;
+    font-size: 12px;
+    font-style: italic;
+}
+// footer :: E
+
+// checkbox
+[type="checkbox"] {
+    display: none !important;
+
+    + label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .check_ico {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #252525;
+            margin-right: 5px;
+            flex: 0 0 auto;
+            transition: background 0.3s ease;
+            align-self: flex-start;
+
+            i {
+                display: block;
+                font-size: 15px;
+                color: #fff;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+        }
+    }
+
+    &:checked {
+        + label {
+            .check_ico {
+                background: #252525;
+
+                i {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// 요약
+.summary {
+    text-align: center;
+
+    .travel_date {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .country_load {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            font-size: 15px;
+            & + li {
+                position: relative;
+                margin-left: 15px;
+                padding-left: 15px;
+
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(-59%, -50%);
+                    display: block;
+                    width: 10px;
+                    height: 2px;
+                    background: #252525;
+                    border-radius: 5px;
+                    content: "";
+                }
+            }
+        }
+    }
+}
+
+// 준비물
+.supplies {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 30px;
+
+    .box {
+        width: calc(33.33% - 20px);
+    }
+
+    .category {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    li {
+        margin-bottom: 3px;
+        font-size: 15px;
+    }
+}
+
+// 간단한 인사말
+.language {
+    margin-top: 30px;
+    table {
+        margin: 0 auto;
+        th {
+            padding: 3px 10px;
+            border: 1px solid #252525;
+            font-weight: 700;
+            background: #f5f5f5;
+        }
+        td {
+            padding: 3px 10px;
+            border: 1px solid #252525;
+        }
+    }
+}
+
+// 음식 정보
+.food_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+
+    li {
+        width: calc(33.333% - 10px);
+
+        img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .name {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 17px;
+        }
+
+        .desc {
+            font-size: 15px;
+        }
+    }
+}
+
+// 세부일정
+.detail_schedule {
+    text-align: center;
+
+    .today {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 2px 5px;
+        font-style: italic;
+        color: #fff;
+        background: #252525;
+    }
+
+    .calendar {
+        margin-top: 30px;
+
+        &_header {
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+
+        &_body {
+            max-width: 400px;
+            margin: 0 auto;
+            table {
+                width: 100%;
+                table-layout: fixed;
+
+                th {
+                    border: 1px solid #252525;
+                    padding: 5px 0;
+                    font-size: 13px;
+                    line-height: 1;
+
+                    &:first-child {
+                        color: red;
+                    }
+                    &:last-child {
+                        color: blue;
+                    }
+                }
+                td {
+                    padding: 5px 0;
+                    border: 1px solid #252525;
+                    vertical-align: top;
+
+                    &:first-child {
+                        color: red;
+                    }
+                    &:last-child {
+                        color: blue;
+                    }
+
+                    .date {
+                        padding: 0 5px;
+                        font-size: 14px;
+                        text-align: right;
+                    }
+
+                    .terms {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        height: 20px;
+                        font-size: 12px;
+                        color: #fff;
+
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            right: -1px;
+                            width: 2px;
+                            height: 100%;
+                            background: inherit;
+                            content: "";
+                        }
+
+                        .half {
+                            position: relative;
+                            height: 100%;
+                            flex: 1;
+
+                            &::before {
+                                position: absolute;
+                                top: 0;
+                                right: -1px;
+                                width: 2px;
+                                height: 100%;
+                                background: inherit;
+                                content: "";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.paris {
+    background: $paris;
+}
+.swiss {
+    background: $swiss;
+}
+.italy {
+    background: $italy;
+}
+.spain {
+    background: $spain;
+}
+.thailand {
+    background: $thailand;
+}
+
+.time_table {
+    padding-left: 100px;
+
+    .time_row {
+        position: relative;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        border-left: 2px solid #555;
+
+        .time {
+            position: absolute;
+            top: 0;
+            right: calc(100% + 20px);
+            font-size: 18px;
+            font-weight: 700;
+            color: #555;
+        }
+
+        .location {
+            position: relative;
+            font-size: 18px;
+            font-weight: 700;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: calc(100% + 21px);
+                transform: translate(50%, -50%);
+                width: 18px;
+                height: 18px;
+                background: red;
+                border-radius: 50%;
+                content: "";
+            }
+            &::after {
+                position: absolute;
+                top: 50%;
+                right: calc(100% + 21px);
+                transform: translate(50%, -50%);
+                width: 12px;
+                height: 12px;
+                border: 2px solid #fff;
+                background: red;
+                border-radius: 50%;
+                content: "";
+            }
+        }
+
+        .taken {
+            margin-top: 2px;
+            padding-left: 15px;
+            color: #aaa;
+        }
+
+        .note {
+            margin-top: 5px;
+            padding-left: 15px;
+
+            ul {
+                li {
+                    display: flex;
+                    gap: 5px;
+                    font-size: 15px;
+                    &::before {
+                        content: "·";
+                    }
+                }
+
+                & + ul {
+                    margin-top: 10px;
+                }
+            }
+
+            .info {
+                display: flex;
+                margin-left: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                gap: 15px;
+                border-radius: 5px;
+
+                &::before {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    background: url("../../common/images/icon_lodging.png")
+                        center center no-repeat;
+                    background-size: cover;
+                    flex: 0 0 auto;
+                    content: "";
+                }
+
+                &.lodging::before {
+                    background-image: url("../../common/images/icon_lodging.png");
+                }
+
+                &.airplane::before {
+                    background-image: url("../../common/images/icon_airplane.png");
+                }
+
+                table {
+                    border: 1px solid #252525;
+                    font-size: 14px;
+
+                    th {
+                        padding: 2px 10px;
+                        border: 1px solid #252525;
+                        font-weight: 700;
+                        background: #f5f5f5;
+                    }
+                    td {
+                        padding: 2px 10px;
+                        border: 1px solid #252525;
+                    }
+                }
+            }
+        }
+
+        img {
+            display: block;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+    }
+}

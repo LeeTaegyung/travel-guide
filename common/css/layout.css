@@ -1,0 +1,393 @@
+@charset "UTF-8";
+#wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #fff;
+  z-index: 100;
+}
+#header .title {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+#header .back_btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45px;
+  height: 100%;
+}
+
+#container {
+  padding: 50px 0 100px;
+}
+#container .sec .subject {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+#container .sec + .sec {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px dashed #252525;
+}
+
+#footer {
+  padding: 5px 0;
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+}
+
+[type=checkbox] {
+  display: none !important;
+}
+[type=checkbox] + label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+[type=checkbox] + label .check_ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #252525;
+  margin-right: 5px;
+  flex: 0 0 auto;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+}
+[type=checkbox] + label .check_ico i {
+  display: block;
+  font-size: 15px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+[type=checkbox]:checked + label .check_ico {
+  background: #252525;
+}
+[type=checkbox]:checked + label .check_ico i {
+  opacity: 1;
+}
+
+.summary {
+  text-align: center;
+}
+.summary .travel_date {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.summary .country_load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summary .country_load li {
+  font-size: 15px;
+}
+.summary .country_load li + li {
+  position: relative;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+.summary .country_load li + li::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-59%, -50%);
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: #252525;
+  border-radius: 5px;
+  content: "";
+}
+
+.supplies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 30px;
+}
+.supplies .box {
+  width: calc(33.33% - 20px);
+}
+.supplies .category {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.supplies li {
+  margin-bottom: 3px;
+  font-size: 15px;
+}
+
+.language {
+  margin-top: 30px;
+}
+.language table {
+  margin: 0 auto;
+}
+.language table th {
+  padding: 3px 10px;
+  border: 1px solid #252525;
+  font-weight: 700;
+  background: #f5f5f5;
+}
+.language table td {
+  padding: 3px 10px;
+  border: 1px solid #252525;
+}
+
+.food_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+.food_list li {
+  width: calc(33.333% - 10px);
+}
+.food_list li img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.food_list li .name {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 17px;
+}
+.food_list li .desc {
+  font-size: 15px;
+}
+
+.detail_schedule {
+  text-align: center;
+}
+.detail_schedule .today {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 2px 5px;
+  font-style: italic;
+  color: #fff;
+  background: #252525;
+}
+.detail_schedule .calendar {
+  margin-top: 30px;
+}
+.detail_schedule .calendar_header {
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+.detail_schedule .calendar_body {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.detail_schedule .calendar_body table {
+  width: 100%;
+  table-layout: fixed;
+}
+.detail_schedule .calendar_body table th {
+  border: 1px solid #252525;
+  padding: 5px 0;
+  font-size: 13px;
+  line-height: 1;
+}
+.detail_schedule .calendar_body table th:first-child {
+  color: red;
+}
+.detail_schedule .calendar_body table th:last-child {
+  color: blue;
+}
+.detail_schedule .calendar_body table td {
+  padding: 5px 0;
+  border: 1px solid #252525;
+  vertical-align: top;
+}
+.detail_schedule .calendar_body table td:first-child {
+  color: red;
+}
+.detail_schedule .calendar_body table td:last-child {
+  color: blue;
+}
+.detail_schedule .calendar_body table td .date {
+  padding: 0 5px;
+  font-size: 14px;
+  text-align: right;
+}
+.detail_schedule .calendar_body table td .terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 20px;
+  font-size: 12px;
+  color: #fff;
+}
+.detail_schedule .calendar_body table td .terms::before {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 2px;
+  height: 100%;
+  background: inherit;
+  content: "";
+}
+.detail_schedule .calendar_body table td .terms .half {
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+.detail_schedule .calendar_body table td .terms .half::before {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 2px;
+  height: 100%;
+  background: inherit;
+  content: "";
+}
+
+.paris {
+  background: #000091;
+}
+
+.swiss {
+  background: #ff0000;
+}
+
+.italy {
+  background: #009246;
+}
+
+.spain {
+  background: #c60b1e;
+}
+
+.thailand {
+  background: #2d2a4a;
+}
+
+.time_table {
+  padding-left: 100px;
+}
+.time_table .time_row {
+  position: relative;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  border-left: 2px solid #555;
+}
+.time_table .time_row .time {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 20px);
+  font-size: 18px;
+  font-weight: 700;
+  color: #555;
+}
+.time_table .time_row .location {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+}
+.time_table .time_row .location::before {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 21px);
+  transform: translate(50%, -50%);
+  width: 18px;
+  height: 18px;
+  background: red;
+  border-radius: 50%;
+  content: "";
+}
+.time_table .time_row .location::after {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 21px);
+  transform: translate(50%, -50%);
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  background: red;
+  border-radius: 50%;
+  content: "";
+}
+.time_table .time_row .taken {
+  margin-top: 2px;
+  padding-left: 15px;
+  color: #aaa;
+}
+.time_table .time_row .note {
+  margin-top: 5px;
+  padding-left: 15px;
+}
+.time_table .time_row .note ul li {
+  display: flex;
+  gap: 5px;
+  font-size: 15px;
+}
+.time_table .time_row .note ul li::before {
+  content: "·";
+}
+.time_table .time_row .note ul + ul {
+  margin-top: 10px;
+}
+.time_table .time_row .note .info {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 15px;
+  border-radius: 5px;
+}
+.time_table .time_row .note .info::before {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("../../common/images/icon_lodging.png") center center no-repeat;
+  background-size: cover;
+  flex: 0 0 auto;
+  content: "";
+}
+.time_table .time_row .note .info.lodging::before {
+  background-image: url("../../common/images/icon_lodging.png");
+}
+.time_table .time_row .note .info.airplane::before {
+  background-image: url("../../common/images/icon_airplane.png");
+}
+.time_table .time_row .note .info table {
+  border: 1px solid #252525;
+  font-size: 14px;
+}
+.time_table .time_row .note .info table th {
+  padding: 2px 10px;
+  border: 1px solid #252525;
+  font-weight: 700;
+  background: #f5f5f5;
+}
+.time_table .time_row .note .info table td {
+  padding: 2px 10px;
+  border: 1px solid #252525;
+}
+.time_table .time_row img {
+  display: block;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+/*# sourceMappingURL=layout.css.map */
