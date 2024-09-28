@@ -1,6 +1,5 @@
 @charset "UTF-8";
 #wrap {
-  height: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -28,7 +27,7 @@
 
 #container {
   padding: 50px 0 100px;
-  min-height: calc(100% - 75px);
+  min-height: calc(100vh - 75px);
 }
 #container .sec {
   padding: 0 15px;
@@ -86,6 +85,14 @@
   opacity: 1;
 }
 
+.price {
+  color: orangered;
+}
+
+.hl {
+  background: #fcd345;
+}
+
 .guide_list {
   display: flex;
   flex-wrap: wrap;
@@ -131,6 +138,30 @@
   background: #252525;
   border-radius: 5px;
   content: "";
+}
+.summary .summary_list {
+  margin-top: 20px;
+  text-align: left;
+}
+.summary .summary_list li {
+  display: flex;
+  margin-bottom: 3px;
+  font-size: 15px;
+}
+.summary .summary_list li.border {
+  padding-top: 3px;
+  border-top: 1px dotted orangered;
+}
+.summary .summary_list li span {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  width: 74px;
+  margin-right: 5px;
+  font-weight: 700;
+}
+.summary .summary_list li span::after {
+  content: "::";
 }
 
 .supplies {
@@ -301,6 +332,52 @@
   background: #2d2a4a;
 }
 
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+.info::before {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("../../common/images/icon_lodging.png") center center no-repeat;
+  background-size: cover;
+  flex: 0 0 auto;
+  content: "";
+}
+.info.lodging::before {
+  background-image: url("../../common/images/icon_lodging.png");
+}
+.info.airplane::before {
+  background-image: url("../../common/images/icon_airplane.png");
+}
+.info.tour::before {
+  background-image: url("../../common/images/icon_tour.png");
+}
+.info .scroll_table {
+  padding-bottom: 5px;
+  padding-right: 5px;
+  overflow: auto;
+}
+.info .scroll_table table {
+  border: 1px solid #252525;
+  font-size: 14px;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+.info .scroll_table table th {
+  padding: 2px 10px;
+  border: 1px solid #252525;
+  font-weight: 700;
+  background: #f5f5f5;
+}
+.info .scroll_table table td {
+  padding: 2px 10px;
+  border: 1px solid #252525;
+}
+
 .time_table {
   padding-left: 100px;
 }
@@ -355,6 +432,11 @@
   margin-top: 5px;
   padding-left: 15px;
 }
+.time_table .time_row .note a {
+  color: green;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .time_table .time_row .note ul li {
   display: flex;
   gap: 5px;
@@ -367,51 +449,11 @@
   margin-top: 10px;
 }
 .time_table .time_row .note .info {
-  display: flex;
-  flex-wrap: wrap;
   margin-top: 10px;
-  margin-bottom: 10px;
-  gap: 15px;
-  border-radius: 5px;
-}
-.time_table .time_row .note .info::before {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background: url("../../common/images/icon_lodging.png") center center no-repeat;
-  background-size: cover;
-  flex: 0 0 auto;
-  content: "";
-}
-.time_table .time_row .note .info.lodging::before {
-  background-image: url("../../common/images/icon_lodging.png");
-}
-.time_table .time_row .note .info.airplane::before {
-  background-image: url("../../common/images/icon_airplane.png");
-}
-.time_table .time_row .note .info .scroll_table {
-  padding-bottom: 5px;
-  padding-right: 5px;
-  overflow: auto;
-}
-.time_table .time_row .note .info .scroll_table table {
-  border: 1px solid #252525;
-  font-size: 14px;
-  table-layout: fixed;
-  white-space: nowrap;
-}
-.time_table .time_row .note .info .scroll_table table th {
-  padding: 2px 10px;
-  border: 1px solid #252525;
-  font-weight: 700;
-  background: #f5f5f5;
-}
-.time_table .time_row .note .info .scroll_table table td {
-  padding: 2px 10px;
-  border: 1px solid #252525;
 }
 .time_table .time_row img {
   display: block;
+  max-width: 500px;
   margin-top: 10px;
   margin-left: 15px;
 }

@@ -7,7 +7,6 @@ $spain: #c60b1e;
 $thailand: #2d2a4a;
 
 #wrap {
-    height: 100%;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -39,7 +38,7 @@ $thailand: #2d2a4a;
 // container :: S
 #container {
     padding: 50px 0 100px;
-    min-height: calc(100% - 75px);
+    min-height: calc(100vh - 75px);
 
     .sec {
         padding: 0 15px;
@@ -113,6 +112,14 @@ $thailand: #2d2a4a;
     }
 }
 
+.price {
+    color: orangered;
+}
+
+.hl {
+    background: rgba(252, 211, 69, 1);
+}
+
 // 여행국가
 .guide_list {
     display: flex;
@@ -161,6 +168,36 @@ $thailand: #2d2a4a;
                     background: #252525;
                     border-radius: 5px;
                     content: "";
+                }
+            }
+        }
+    }
+
+    .summary_list {
+        margin-top: 20px;
+        text-align: left;
+
+        li {
+            display: flex;
+            margin-bottom: 3px;
+            font-size: 15px;
+
+            &.border {
+                padding-top: 3px;
+                border-top: 1px dotted orangered;
+            }
+
+            span {
+                display: flex;
+                justify-content: space-between;
+                flex: 0 0 auto;
+                width: 74px;
+                margin-right: 5px;
+                // font-size: 16px;
+                font-weight: 700;
+
+                &::after {
+                    content: "::";
                 }
             }
         }
@@ -354,6 +391,59 @@ $thailand: #2d2a4a;
     background: $thailand;
 }
 
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    gap: 15px;
+
+    &::before {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url("../../common/images/icon_lodging.png") center center
+            no-repeat;
+        background-size: cover;
+        flex: 0 0 auto;
+        content: "";
+    }
+
+    &.lodging::before {
+        background-image: url("../../common/images/icon_lodging.png");
+    }
+
+    &.airplane::before {
+        background-image: url("../../common/images/icon_airplane.png");
+    }
+
+    &.tour::before {
+        background-image: url("../../common/images/icon_tour.png");
+    }
+
+    .scroll_table {
+        padding-bottom: 5px;
+        padding-right: 5px;
+        overflow: auto;
+        table {
+            border: 1px solid #252525;
+            font-size: 14px;
+            table-layout: fixed;
+            white-space: nowrap;
+
+            th {
+                padding: 2px 10px;
+                border: 1px solid #252525;
+                font-weight: 700;
+                background: #f5f5f5;
+            }
+            td {
+                padding: 2px 10px;
+                border: 1px solid #252525;
+            }
+        }
+    }
+}
+
 .time_table {
     padding-left: 100px;
 
@@ -412,6 +502,12 @@ $thailand: #2d2a4a;
             margin-top: 5px;
             padding-left: 15px;
 
+            a {
+                color: green;
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+
             ul {
                 li {
                     display: flex;
@@ -428,59 +524,13 @@ $thailand: #2d2a4a;
             }
 
             .info {
-                display: flex;
-                flex-wrap: wrap;
                 margin-top: 10px;
-                margin-bottom: 10px;
-                gap: 15px;
-                border-radius: 5px;
-
-                &::before {
-                    display: block;
-                    width: 40px;
-                    height: 40px;
-                    background: url("../../common/images/icon_lodging.png")
-                        center center no-repeat;
-                    background-size: cover;
-                    flex: 0 0 auto;
-                    content: "";
-                }
-
-                &.lodging::before {
-                    background-image: url("../../common/images/icon_lodging.png");
-                }
-
-                &.airplane::before {
-                    background-image: url("../../common/images/icon_airplane.png");
-                }
-
-                .scroll_table {
-                    padding-bottom: 5px;
-                    padding-right: 5px;
-                    overflow: auto;
-                    table {
-                        border: 1px solid #252525;
-                        font-size: 14px;
-                        table-layout: fixed;
-                        white-space: nowrap;
-
-                        th {
-                            padding: 2px 10px;
-                            border: 1px solid #252525;
-                            font-weight: 700;
-                            background: #f5f5f5;
-                        }
-                        td {
-                            padding: 2px 10px;
-                            border: 1px solid #252525;
-                        }
-                    }
-                }
             }
         }
 
         img {
             display: block;
+            max-width: 500px;
             margin-top: 10px;
             margin-left: 15px;
         }
