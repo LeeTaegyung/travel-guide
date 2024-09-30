@@ -235,7 +235,7 @@
                 <!-- 체크리스트 -->
                 <div class="sec">
                     <h2 class="subject">체크리스트</h2>
-                    <div class="supplies">
+                    <div class="check_wrap" id="check_wrap">
                         <div class="box">
                             <div class="category">필수</div>
                             <ul class="list">
@@ -1245,10 +1245,11 @@
             </footer>
             <!-- footer :: E -->
         </div>
+        <script src="../common/js/script.js"></script>
+        <script>
+            document.getElementById(
+                "today_data"
+            ).innerText = new Date().toLocaleDateString();
+        </script>
     </body>
-    <script>
-        document.getElementById(
-            "today_data"
-        ).innerText = new Date().toLocaleDateString();
-    </script>
 </html>

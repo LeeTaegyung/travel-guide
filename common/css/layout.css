@@ -164,21 +164,21 @@
   content: "::";
 }
 
-.supplies {
+.check_wrap {
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
   gap: 30px;
 }
-.supplies .box {
+.check_wrap .box {
   width: calc(50% - 15px);
 }
-.supplies .category {
+.check_wrap .category {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 700;
 }
-.supplies li {
+.check_wrap li {
   margin-bottom: 3px;
   font-size: 15px;
 }
