@@ -425,6 +425,9 @@
                 <!-- 체크리스트 -->
                 <div class="sec">
                     <h2 class="subject">체크리스트</h2>
+                    <button type="button" class="reset_btn" id="check_reset">
+                        초기화
+                    </button>
                     <div class="check_wrap" id="check_wrap"></div>
                 </div>
             </main>
@@ -445,7 +448,7 @@
                     category: "필수",
                     data: [
                         { text: "여권/여권사본/여권사진", done: false },
-                        { text: "이심/유심", done: false },
+                        { text: "이심", done: false },
                         { text: "트래블월렛", done: false },
                         { text: "현금", done: false },
                         { text: "비상용 신용카드", done: false },
@@ -510,9 +513,8 @@
                         { text: "바람막이(두꺼운거)", done: false },
                         { text: "히트텍 상하의2", done: false },
                         { text: "잠옷", done: false },
-                        { text: "속옷5", done: false },
-                        { text: "양말5", done: false },
-                        { text: "두꺼운양말1", done: false },
+                        { text: "속옷6", done: false },
+                        { text: "양말6", done: false },
                         { text: "선글라스", done: false },
                     ],
                 },
@@ -552,8 +554,47 @@
                         { text: "핫팩", done: false },
                     ],
                 },
+                {
+                    category: "",
+                    data: [],
+                },
+                {
+                    category: "기내수하물",
+                    data: [
+                        {
+                            text:
+                                "치약, 칫솔, 클렌징워터, 클렌징폼, 토너패드, 크림, 선크림, 립밤, 빗, 고무줄",
+                            done: false,
+                        },
+                        {
+                            text:
+                                "목베개, 압박스타킹, 안대, 쪼리, 가습마스크, 두꺼운 양말",
+                            done: false,
+                        },
+                        {
+                            text: "보조배터리, 러기지체커, 버즈라이브, 이어폰",
+                            done: false,
+                        },
+                        { text: "비염약, 인공눈물약", done: false },
+                    ],
+                },
+                {
+                    category: "들고 다닐 것",
+                    data: [
+                        { text: "여권, 돈, 트월카드, 바우처", done: false },
+                        { text: "보조배터리, 버즈라이브, 이어폰", done: false },
+                        { text: "선글라스, 우양산, 손풍기", done: false },
+                        { text: "비염약, 인공눈물약", done: false },
+                        {
+                            text:
+                                "고무줄, 휴지, 물티슈, 립밤, 거울, 휴대용 가글",
+                            done: false,
+                        },
+                    ],
+                },
             ];
             checkInit(CHECKLIST);
+            resetCheckList(CHECKLIST);
         </script>
     </body>
 </html>

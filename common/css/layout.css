@@ -164,6 +164,19 @@
   content: "::";
 }
 
+.reset_btn {
+  padding: 5px 10px;
+  border: 1px solid #252525;
+  background: #252525;
+  color: #fff;
+  border-radius: 3px;
+}
+.reset_btn:hover {
+  background: #fff;
+  color: #252525;
+  transition: all 0.3s ease;
+}
+
 .check_wrap {
   display: flex;
   flex-wrap: wrap;

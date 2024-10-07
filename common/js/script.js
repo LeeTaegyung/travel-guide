@@ -47,4 +47,10 @@ const checkInit = (CHECKLIST) => {
     updateCheckList(checkList);
 };
 
-// checkInit();
+const resetCheckList = (checkList) => {
+    document.getElementById("check_reset").addEventListener("click", () => {
+        localStorage.removeItem("checkList");
+        document.getElementById("check_wrap").innerHTML = "";
+        checkInit(checkList);
+    });
+};
