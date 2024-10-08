@@ -466,6 +466,7 @@
 }
 .time_table .time_row img {
   display: block;
+  width: 100%;
   max-width: 500px;
   margin-top: 10px;
   margin-left: 15px;
